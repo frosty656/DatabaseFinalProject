@@ -4,10 +4,9 @@ DROP TABLE IF EXISTS State;
 CREATE TABLE State(
   State_ID int(11) NOT NULL auto_increment,
   State VARCHAR(25) NOT NULL,
-  TaxRate int(11) NOT NULL,
   PRIMARY KEY  (State_ID)
 ) AS
-	SELECT DISTINCT State, TaxRate
+	SELECT DISTINCT State
 	FROM Contact
 	WHERE State IS NOT NULL
 	ORDER BY State;
@@ -23,4 +22,4 @@ UPDATE Contact
 	WHERE State.State IS NOT NULL;
 
 ALTER TABLE Contact
-	DROP COLUMN State, DROP TaxRate;
+	DROP COLUMN State;

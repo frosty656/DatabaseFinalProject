@@ -33,7 +33,7 @@ UPDATE Phone
 	WHERE Contact.Fax IS NOT NULL;
 
 ALTER TABLE Contact
-	DROP COLUMN Email, DROP Fax;
+	DROP Phone, DROP Fax;
 
 
 DROP TABLE IF EXISTS Type;

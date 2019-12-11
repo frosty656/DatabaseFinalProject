@@ -13,15 +13,13 @@ CREATE TABLE Contact(
   City VARCHAR(255),
   State VARCHAR(255),
   PostalCode VARCHAR(255),
-  Country VARCHAR(255),
   Title VARCHAR(255),
   Company VARCHAR(255),
-  TaxRate VARCHAR(255),
   PRIMARY KEY  (Contact_ID)
 ) AS
 	SELECT DISTINCT FirstName, LastName, Street, Email,
 	                Phone, Fax, City, State, PostalCode,
-	                Title, Company, TaxRate
+	                Title, Company
 
 	FROM invoices
 	ORDER BY LastName;
@@ -53,8 +51,5 @@ ALTER TABLE invoices
     DROP COLUMN State,
     DROP COLUMN PostalCode,
     DROP COLUMN Title,
-    DROP COLUMN Company,
-    DROP COLUMN TaxRate
-
-
+    DROP COLUMN Company
 ;
