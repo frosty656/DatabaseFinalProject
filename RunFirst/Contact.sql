@@ -1,5 +1,5 @@
 USE InvoiceProject;
-DROP TABLE IF EXISTS Contect;
+DROP TABLE IF EXISTS Contact;
 
 CREATE TABLE Contact(
   Contact_ID int(11) NOT NULL auto_increment,
